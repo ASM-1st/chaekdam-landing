@@ -1,11 +1,11 @@
 .landing {min-height:100vh;background:#f7f3e9;color:#243d33;font-family:"Noto Sans KR",sans-serif;word-break:keep-all}
 .landing header,.landing main {width:min(1120px,88%);margin:auto}
 .landing header {display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-bottom:1px solid #b4b9aa}
-.wordmark,.landing h1,.landing h2,.landing h3,.jacket figcaption p {font-family:"Noto Serif KR","Batang",serif}
+.wordmark,.landing h1,.landing h2,.landing h3 {font-family:"Noto Serif KR","Batang",serif}
 .wordmark {display:flex;align-items:center;gap:10px;font-size:30px;font-weight:700}
 .landing header a {font-size:14px;color:inherit}
 .intro {display:grid;grid-template-columns:1.15fr 1fr;gap:6%;align-items:center;padding:76px 0}
-.folio,.jacket small,.imprint,.landing li small {font:600 11px/1.5 sans-serif;letter-spacing:.15em}
+.folio,.landing li small {font:600 11px/1.5 sans-serif;letter-spacing:.15em}
 .folio {display:flex;align-items:center;gap:12px}
 .folio i {width:32px;height:1px;background:currentColor}
 .landing h1 {font-size:clamp(52px,6vw,89px);letter-spacing:-.075em;line-height:1.15;margin:28px 0}
@@ -13,21 +13,42 @@
 .lede,.landing li p {color:#505d52;font-size:16px;line-height:1.85}
 .landing .start {display:inline-flex;align-items:center;gap:24px;background:#264c3c;color:#fff;padding:15px 22px;margin-top:28px;border-radius:4px;font-weight:600}
 .landing .start:hover {background:#18392c}
-.jacket {position:relative;margin:0;background:#e4e4d5;display:grid;place-items:center;min-height:418px;padding:24px 0 45px;overflow:hidden}
-.cover {width:56%;min-width:195px;color:#efe7cc;background:#295442;position:relative;padding:22px 20px 16px 28px;border-left:7px solid #193d2f;transform:rotate(-7deg);box-shadow:3px 2px #e7dfc9,5px 3px #aba991,12px 16px 20px #263b292d}
-.cover small {font-size:8px}
-.cover h2 {font-size:clamp(33px,3.3vw,48px);line-height:1.19;letter-spacing:-.07em;margin:20px 0}
-.cover svg {width:calc(100% + 48px);height:88px;margin-left:-28px}
-.imprint {margin-top:14px;display:flex;justify-content:space-between;font-size:9px}
-.jacket figcaption {position:absolute;right:5%;bottom:18px;background:#fffbef;color:#363d31;transform:rotate(3deg);padding:13px 20px;box-shadow:0 3px 9px #37453120;border-top:2px solid #a75b3c}
-.jacket figcaption small,.landing li small {color:#975137}
-.jacket figcaption p {margin:6px 0;font-size:16px}
+/* The ruled sheet continues beneath Dami’s pencil. */
+.dami-note {
+  margin: 0;
+  padding: clamp(24px, 3vw, 40px);
+  padding-bottom: 0;
+  background: #fffaf0;
+  border-left: 4px solid #c88460;
+  color: #423a31;
+  overflow: hidden;
+}
+.dami-note figcaption {
+  border-bottom: 1px solid #dbccbc;
+  padding-bottom: 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.dami-note blockquote {
+  margin: 22px 0 12px;
+  font-family: "Noto Serif KR", "Batang", serif;
+  font-size: clamp(21px, 2vw, 29px);
+  line-height: 1.5;
+  letter-spacing: -.04em;
+}
+.dami-note img {
+  display: block;
+  width: min(87%, 335px);
+  height: auto;
+  margin-left: auto;
+}
 #reading-guide {padding:34px 0 68px;border-top:1px solid #b4b9aa}
 #reading-guide h2 {font-size:clamp(25px,3vw,38px);letter-spacing:-.06em;margin:10px 0 24px}
 .landing ol {display:grid;grid-template-columns:repeat(3,1fr);gap:32px;list-style:none;padding:0}
 .landing li {border-top:1px solid #c6c8ba;padding-top:15px}
 .landing h3 {font-size:22px;margin:7px 0}
 .landing li p {font-size:15px}
-@media(max-width:720px){.intro {grid-template-columns:1fr;gap:32px;padding:44px 0 32px}.jacket {min-height:330px}.cover {width:195px}.landing ol {grid-template-columns:1fr;gap:18px}.landing header {padding:14px 0}.lede br {display:none}}
+@media(max-width:720px){.intro {grid-template-columns:1fr;gap:32px;padding:44px 0 32px}.dami-note img {width:min(76%,240px)}.landing ol {grid-template-columns:1fr;gap:18px}.landing header {padding:14px 0}.lede br {display:none}}
 *, *::before, *::after {box-sizing:border-box} body {margin:0} .landing a {text-decoration:none} .landing figure,.landing ol,.landing p {margin-block-start:0} .landing li p {margin-bottom:0}
 .stores {display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.stores .start {margin:0}
+@media(max-width:480px){.stores .start {font-size:14px;padding:13px 12px}.intro {padding-top:28px;gap:24px}.lede br {display: initial}}
