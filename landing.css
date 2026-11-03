@@ -71,3 +71,43 @@
 .sentence-scene figcaption {font-size: 13px; color: #665a4c}
 .sentence-scene blockquote {margin: 1em 0 0; font: clamp(16px,1.55vw,23px)/1.8 Batang,serif; color: #534b41}
 .sentence-scene mark {background: #f3d996; color: #322a22; padding: 0 .1em}
+.scene-link {display:block}
+@media (max-width:720px) {
+  .landing main,.landing header {width:min(92%,540px)}
+  .landing header {padding:10px 0}
+  .wordmark {font-size:25px}
+  .intro {gap:18px;padding:24px 0}
+  .landing h1 {margin:12px 0;font-size:clamp(36px,9.5vw,48px)}
+  .lede {line-height:1.65;margin-bottom:0}
+  .stores {margin-top:16px}
+  .stores .start {font-size:14px;padding:13px 12px}
+  .dami-note {display:grid;grid-template-columns:1fr 30%;align-items:center;padding:12px 14px 0}
+  .dami-note figcaption {font-size:12px;border:0;padding:0}
+  .dami-note blockquote {font-size:18px;margin:5px 0 12px}
+  .dami-note img {grid-column:2;grid-row:1 / 3;align-self:end;width:100%}
+  #reading-guide {padding:20px 0 32px}
+  #reading-guide h2 {margin:0 0 12px}
+  #reading-guide ol {margin:0;gap:0}
+  #reading-guide li {
+    display:grid;
+    grid-template-columns:minmax(0,1fr) clamp(72px,20vw,96px);
+    grid-template-areas:"number visual" "title visual" "description visual";
+    align-content:center;
+    align-items:center;
+    column-gap:16px;
+    padding:14px 0;
+  }
+  #reading-guide li small {grid-area:number;align-self:end;color:#835438}
+  #reading-guide li h3 {grid-area:title;font-size:20px;line-height:1.35;margin:4px 0 6px}
+  #reading-guide li p {grid-area:description;align-self:start;margin:0;line-height:1.6}
+  #reading-guide .scene-link,#reading-guide .sentence-scene {grid-area:visual}
+  #reading-guide .guide-scene {width:100%;margin:0}
+  #reading-guide .sentence-scene {padding:8px}
+  .sentence-scene figcaption {font-size:10px}
+  .sentence-scene blockquote {font-size:11px;line-height:1.55;margin:6px 0 0}
+}
+@media (max-width:720px) {
+  .sentence-scene .excerpt-context {display:none}
+  .sentence-scene blockquote {font-size:12px}
+  #reading-guide li {grid-template-rows:1fr auto 1fr}
+}
