@@ -52,3 +52,22 @@
 *, *::before, *::after {box-sizing:border-box} body {margin:0} .landing a {text-decoration:none} .landing figure,.landing ol,.landing p {margin-block-start:0} .landing li p {margin-bottom:0}
 .stores {display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.stores .start {margin:0}
 @media(max-width:480px){.stores .start {font-size:14px;padding:13px 12px}.intro {padding-top:28px;gap:24px}.lede br {display: initial}}
+#reading-guide .guide-scene {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  margin: 14px 0;
+  border: 1px solid #d6cdbd;
+  border-radius: 4px;
+}
+#reading-guide .sentence-scene {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8%;
+  background: #fffbef;
+}
+.sentence-scene figcaption {font-size: 13px; color: #665a4c}
+.sentence-scene blockquote {margin: 1em 0 0; font: clamp(16px,1.55vw,23px)/1.8 Batang,serif; color: #534b41}
+.sentence-scene mark {background: #f3d996; color: #322a22; padding: 0 .1em}
