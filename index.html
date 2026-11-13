@@ -51,6 +51,26 @@
 </footer></div>
 
       
+      <script>
+        // 광고가 붙여 보낸 UTM을 플레이 스토어 버튼으로 넘긴다.
+        // 앱(Firebase)이 플레이 설치 리퍼러를 읽어 첫 실행의 출처를 안다.
+        // UTM이 없으면 아무것도 바꾸지 않는다. 쿠키·저장소는 쓰지 않는다.
+        (function () {
+          var params = new URLSearchParams(location.search);
+          var keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'];
+          var utm = new URLSearchParams();
+          keys.forEach(function (key) {
+            var value = params.get(key);
+            if (value) utm.set(key, value.slice(0, 100));
+          });
+          if (!utm.has('utm_source')) return;
+          document.querySelectorAll('a[href^="https://play.google.com/store/apps/details"]').forEach(function (link) {
+            var url = new URL(link.href);
+            url.searchParams.set('referrer', utm.toString());
+            link.href = url.toString();
+          });
+        })();
+      </script>
     </body>
   </html>
   
