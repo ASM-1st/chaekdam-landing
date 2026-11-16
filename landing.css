@@ -116,5 +116,4 @@
 .social-footer a {display:inline-flex;align-items:center;min-height:44px;min-width:44px;color:inherit;font-size:15px}
 .social-footer a:hover,.social-footer a:focus-visible {text-decoration:underline}
 .business-info {flex-basis:100%;margin:0;font-size:13px;color:#505d52}
-.business-info span {white-space:nowrap}
 @media(max-width:720px){.social-footer {width:min(92%,540px)}}
